@@ -18,16 +18,7 @@
     <ClCompile Include="Stroustrup_ground.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="book.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Chrono.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="patron.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,19 +26,6 @@
     <ClInclude Include="std_lib_facilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="book.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="patron.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="library.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="raw_temps.txt" />
-    <Text Include="output.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Chrono.h">

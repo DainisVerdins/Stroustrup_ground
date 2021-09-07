@@ -143,21 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="book.cpp" />
     <ClCompile Include="Chrono.cpp" />
-    <ClCompile Include="library.cpp" />
-    <ClCompile Include="patron.cpp" />
     <ClCompile Include="Stroustrup_ground.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="book.h" />
-    <ClInclude Include="library.h" />
-    <ClInclude Include="patron.h" />
     <ClInclude Include="std_lib_facilities.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="output.txt" />
-    <Text Include="raw_temps.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Chrono.h" />
