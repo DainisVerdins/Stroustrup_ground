@@ -31,5 +31,6 @@
     <None Include="Chrono.h">
       <Filter>Header Files</Filter>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

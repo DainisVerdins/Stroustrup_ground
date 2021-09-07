@@ -42,5 +42,6 @@ namespace Chrono {
 	std::istream& operator>> (std::istream& is, Date& dd);
 
 	Day day_of_week(const Date& d);
-
+	Date next_Sunday(const Date& d);
+	Date next_weekday(const Date& d);
 } // Chrono

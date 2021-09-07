@@ -13,8 +13,9 @@ using namespace std;
 
 int main()
 {
-	Chrono::Date date(1999, Chrono::Month::fеb, 25);
- std::cout<<int(Chrono::day_of_week(date))<<std::endl;
+	Chrono::Date date(2021, Chrono::Month::sep, 12);
+	auto dates = Chrono::next_weekday(date);
+	std::cout<<dates<<std::endl;
 	int day = 6;
 	int month = 9;
 	int year = 2021;

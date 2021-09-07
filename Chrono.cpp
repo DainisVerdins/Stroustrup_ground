@@ -173,7 +173,7 @@ namespace Chrono {
 		int years = d.year() % base;//year of centurary
 		int leapyears = years / 4;
 		int century_code = century_codes[(century+1) % 4];
-		int month_code = months_codes[int(d.month())];
+		int month_code = months_codes[int(d.month())-1];//-1 because january in enum is 1
 		//months start with 1
 		int sum = d.day() + month_code + century_code + years+ leapyears;
 		Day day = Day::monday;//default is monday
@@ -207,11 +207,62 @@ namespace Chrono {
 
 		return day;
 	}
+	//gets next sunday date from inputed
+	Date next_Sunday(const Date& d) {
 
-	//Date next_Sunday(const Date& d) {
-	//	// ...
-	//}
-	//Date next_weekday(const Date& d) {
-	//	// ...
-	//}
+		Date date = d;
+		int days_before_sunday = 0; //days to next sunday
+
+		switch (day_of_week(d))//becasuse 7 days in month
+		{
+		case Day::sunday:
+			days_before_sunday = 7;
+			break;
+		case Day::saturday:
+			days_before_sunday = 1;
+			break;
+		case Day::monday:
+			days_before_sunday = 6;
+			break;
+		case Day::tuesday:
+			days_before_sunday = 5;
+			break;
+		case Day::wednesday:
+			days_before_sunday = 4;
+			break;
+		case Day::thursday:
+			days_before_sunday = 3;
+			break;
+		case Day::friday:
+			days_before_sunday = 2;
+			break;
+		default:
+			days_before_sunday = 0;
+			break;
+		}
+
+		date.add_day( days_before_sunday);
+		return date;
+	}
+	
+	Date next_weekday(const Date& d) {
+		Date date = d;
+
+		int days_next_weekday = 0;//to places on next day
+		switch (day_of_week(d))//becasuse 7 days in month
+		{
+		case Day::saturday:
+			days_next_weekday = 2;
+			break;
+		case Day::friday:
+			days_next_weekday = 3;
+			break;
+		default:
+			days_next_weekday = 1;
+			break;
+		}
+
+		date.add_day(days_next_weekday);
+		return date;
+	}
 }
